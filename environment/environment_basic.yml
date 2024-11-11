@@ -1,4 +1,4 @@
-name: deeprecsys_test
+name: deeprecsys
 channels:
   - nvidia
   - conda-forge
