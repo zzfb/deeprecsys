@@ -1,0 +1,20 @@
+name: deeprecsys
+channels:
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip:
+      - ipykernel
+      - jupyter
+      - keras==2.11.0
+      - keras-preprocessing==1.1.2
+      - matplotlib
+      - matplotlib-inline
+      - numpy
+      - notebook     
+      - pandas
+      - pandas-tfrecords
+      - tensorflow-recommenders==0.7.3
+      - tensorflow-macos==2.11.0
