@@ -1,4 +1,4 @@
-name: deeprecsys
+name: deeprecsys_test
 channels:
   - nvidia
   - conda-forge
@@ -12,9 +12,8 @@ dependencies:
       - keras-preprocessing==1.1.2
       - matplotlib
       - matplotlib-inline
-      - numpy
-      - notebook     
+      - numpy<2.0.0
+      - notebook
       - pandas
-      - pandas-tfrecords
       - tensorflow-recommenders==0.7.3
       - tensorflow-macos==2.11.0
