@@ -160,6 +160,7 @@ cython_debug/
 #.idea/
 
 .vscode
+tmp/
 movies/
 ratings_test/
 ratings_test_random_neg/
@@ -167,3 +168,6 @@ ratings_test_remove_rating3/
 ratings_train/
 ratings_train_random_neg/
 ratings_train_remove_rating3/
+trainer/meta/
+trainer/saved_models/
+logs/

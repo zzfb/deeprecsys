@@ -16,13 +16,13 @@ class CandidateRetrieverTrain(BaseTask):
         self.train_data, self.test_data, self.candidate_data = self.load_data()
 
     def load_data(self) -> Tuple[tf.data.Dataset, tf.data.Dataset]:
-        download_from_directory(BUCKET_NAME, self.hparams.train_data, "/tmp/train")
-        download_from_directory(BUCKET_NAME, self.hparams.test_data, "/tmp/test")
-        download_from_directory(BUCKET_NAME, self.hparams.candidate_data, "/tmp/item")
+        # download_from_directory(BUCKET_NAME, self.hparams.train_data, "/tmp/train")
+        # download_from_directory(BUCKET_NAME, self.hparams.test_data, "/tmp/test")
+        # download_from_directory(BUCKET_NAME, self.hparams.candidate_data, "/tmp/item")
         return (
-            tf.data.Dataset.load("/tmp/train"),
-            tf.data.Dataset.load("/tmp/test"),
-            tf.data.Dataset.load("/tmp/item"),
+            tf.data.Dataset.load("./tmp/ratings_train", compression="GZIP"),
+            tf.data.Dataset.load("./tmp/ratings_test", compression="GZIP"),
+            tf.data.Dataset.load("./tmp/movies", compression="GZIP"),
         )
 
     def run(self) -> Dict:
